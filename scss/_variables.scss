@@ -1,0 +1,30 @@
+:root {
+  // Brand Colors
+  --brand-color-01: #615CF2;
+  --brand-color-02: #C1FF1A;   
+
+  // Gradients
+  --gradient-brand: linear-gradient(to right, var(--brand-color-01), var(--brand-color-02));
+  --gradient-header: linear-gradient(to right, var(--brand-color-01), var(--black));
+
+  // Gray Scale
+  --gray-01: #050110;
+  --gray-02: #0f0c1b;
+  --gray-03: #3f3d49;
+  --gray-04: #57555f;
+  --gray-05: #9995a6;
+  --gray-06: #acb4bf;
+
+  // Neutral
+  --white: #ffffff;
+  --black: #1E1E1E;
+}
+
+// Mixins
+@mixin text-gradient($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
