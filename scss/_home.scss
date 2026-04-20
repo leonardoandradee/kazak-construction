@@ -136,8 +136,8 @@ header {
                 margin-top: 0;
                 margin-bottom: 0;
                 a {
-                    padding: 2.4rem 6.4rem;
-                    font-size: 2rem;
+                    padding: 1.6rem 4.8rem;
+                    font-size: 1.8rem;
                 }
             }
             p {
@@ -154,13 +154,15 @@ footer {
     background: var(--brand-color-01);
     overflow: hidden;
     white-space: nowrap;
+    display: flex;
 
     .carousel-track {
         display: inline-flex;
         align-items: center;
         gap: 6rem;
         padding-right: 6rem; /* Garante que o espaçamento seja contínuo antes de repetir */
-        animation: scroll-carousel 40s linear infinite;
+        animation: scroll-carousel 14s linear infinite;
+        flex-shrink: 0;
 
         img {
             max-width: none;
@@ -174,7 +176,7 @@ footer {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%); /* Com múltiplos tracks no flex, deslizar 100% encaixa exatamente no lugar do vizinho clonado antes que ele suma e relute para 0! */
     }
 }
 
