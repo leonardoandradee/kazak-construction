@@ -121,7 +121,7 @@ header {
             justify-content: space-evenly; /* O grande segredo: distribui todos os elementos verticalmente de forma uniforme! */
             
             h1 {
-                width: 90%;
+                width: 95%;
                 font-size: 5.6rem;
                 margin-bottom: 0;
             }
@@ -176,7 +176,7 @@ footer {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Com múltiplos tracks no flex, deslizar 100% encaixa exatamente no lugar do vizinho clonado antes que ele suma e relute para 0! */
+        transform: translateX(var(--scroll-amount, -20%)); /* Desliza exatamente 1 conjunto original, garantindo um loop contínuo e sem sobreposição */
     }
 }
 
